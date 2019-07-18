@@ -3,21 +3,41 @@
 Part I 
 create a music player app
 
-your app should display a list of artist that have albums 
+your app should display a list of artist that have albums {}
 
-your app should hold a list of albums for each artist
+your app should hold a list of albums for each artist []
 
-your app should display all the songs for one album 
+your app should display all the songs for one album []
 
 you app should keep track of how many times a song is played
+
+
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
 create an app class 
 properties 
 artistList
-
+ 
 methods
 add artist
+*/
+var musicPlayer = [];
+
+class app{
+
+	constructor(artistList){
+		this.artistList = artistList;
+	}
+}
+
+function addArtist(newArtist){
+	const Artist = new app(newArtist);
+	musicPlayer.push(Artist);
+	return musicPlayer;
+}
+
+/*
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
 create an artist class 
