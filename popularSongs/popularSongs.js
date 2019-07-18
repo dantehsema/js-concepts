@@ -10,21 +10,46 @@ your app should hold a list of albums for each artist
 your app should display all the songs for one album 
 
 you app should keep track of how many times a song is played
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
+create an app class 
+properties 
+artistList
 
+methods
+add artist
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
+create an artist class 
+properties
+albumList: [Albums, Albums, Albums]
+name: string;
+
+methods
+add albums
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
 create an album class 
 properties 
 title : string;
 artist : string;
-songs : [Song, Song, Song];
+songsList : [Song, Song, Song];
 
+method
+add song
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
 Create a Song class 
 properties
 title : string;
 artist : string;
 plays : number;
-playSong: boolean;
 
+method
+play song
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 Play Song function 
 increases the 'plays' properties by +1 on the songs class
