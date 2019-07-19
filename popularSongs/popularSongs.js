@@ -1,5 +1,5 @@
-/*
 
+/*
 Part I 
 create a music player app []
 
@@ -66,18 +66,36 @@ var artistAlbum = [];
 class artist{
 	constructor(albumList, name){
 		this.albumList = albumList;
+		this.name = name;
 	}
 }
 
-function addAlbum(albumList){
-	const Album = new artist(albumList);
+function addAlbum(albumList, name){
+	const Album = new artist([albumList],name);
 	console.log('This an new album:', albumList);
 	artistAlbum.push(Album);
 	return artistAlbum;
 }
 
+function newAlbumForName(addAlbum, name){
+	for(var i=0; i<artistAlbum.length; i++){
+		if(artistAlbum[i].name === name){
+			console.log('this is the current album for', artistAlbum[i].name,': ',artistAlbum[i].albumList);
+			const newAl = artistAlbum[i].albumList.push(addAlbum);
+			console.log('here is the updated album list for:', artistAlbum[i].albumList);
+		}else{
+			const Album = new artist([addAlbum],name);
+			console.log('This an new album:', addAlbum);
+			artistAlbum.push(Album);
+		}
+			return artistAlbum;
+	}
+}
+
 /*
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
 create an album class 
@@ -88,6 +106,31 @@ songsList : [Song, Song, Song];
 
 method
 add song
+*/
+var completeAlbums = [];
+
+class Album{
+	constructor(title, artist, song){
+		this.title = title;
+		this.artist = artist;
+		this.song = song;
+	}
+}
+
+function song(title, artist, song){
+	const music = new Album(title, artist, [song]);
+	console.log('this is a new album, artist, and song:', music);
+	completeAlbums.push(music);
+	return completeAlbums;
+}
+
+function newSong(title, artist, song){
+	for(var i=0; i<completeAlbums.length; i++){
+		if((completeAlbums.length[i].artist === 'artist')&&(completeAlbums.length[i].title === title))
+	}
+}
+
+/*
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
