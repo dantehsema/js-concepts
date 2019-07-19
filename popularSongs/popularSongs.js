@@ -1,13 +1,13 @@
 /*
 
 Part I 
-create a music player app
+create a music player app []
 
-your app should display a list of artist that have albums {}
+your app should display a list of artist that have albums 
 
-your app should hold a list of albums for each artist []
+your app should hold a list of albums for each artist 
 
-your app should display all the songs for one album []
+your app should display all the songs for one album 
 
 you app should keep track of how many times a song is played
 
@@ -24,13 +24,24 @@ var musicPlayer = [];
 
 class app{
 
-	constructor(artistList){
-		this.artistList = artistList;
+	constructor(artistName){
+		this.artistName = artistName;
 	}
+
+	// Album(artistName,newAlbum){
+	// 	for(var i=0; i<musicPlayer.length; i++){
+	// 		if(musicPlayer[i].artistName === artistName){
+	// 			console.log('these are the artists in this playlist:',musicPlayer[i].artistName)
+	// 			musicPlayer[i].artistName = new app(newAlbum);
+	// 		return musicPlayer;
+	// 		}
+	// 	}	
+	// }
 }
 
-function addArtist(newArtist){
-	const Artist = new app(newArtist);
+function addArtist(artistName){
+	const Artist = new app(artistName);
+	console.log('this is the new Artist added:',Artist);
 	musicPlayer.push(Artist);
 	return musicPlayer;
 }
@@ -47,6 +58,25 @@ name: string;
 
 methods
 add albums
+
+*/
+
+var artistAlbum = [];
+
+class artist{
+	constructor(albumList, name){
+		this.albumList = albumList;
+	}
+}
+
+function addAlbum(albumList){
+	const Album = new artist(albumList);
+	console.log('This an new album:', albumList);
+	artistAlbum.push(Album);
+	return artistAlbum;
+}
+
+/*
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -82,5 +112,3 @@ your app has playSong boolean that turns a song on or off
 Part II
 your app should display the most popular songs from an artist discography list 
 */
-
-
