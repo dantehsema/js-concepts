@@ -126,7 +126,11 @@ function song(title, artist, song){
 
 function newSong(title, artist, song){
 	for(var i=0; i<completeAlbums.length; i++){
-		if((completeAlbums.length[i].artist === 'artist')&&(completeAlbums.length[i].title === title))
+		if((completeAlbums[i].artist === artist)&&(completeAlbums[i].title === title)&&(completeAlbums[i].song !== song)){
+			completeAlbums[i].song.push(song);
+			console.log('this is a new song to current album and artist:', song)
+			return completeAlbums;
+		}
 	}
 }
 
@@ -142,6 +146,40 @@ plays : number;
 
 method
 play song
+*/
+var songPlays = [];
+
+class Song{
+	constructor(title,artist,plays){
+		this.title = title;
+		this.artist = artist;
+		this.plays = plays;
+	}
+}
+
+function addSong(title, artist, plays){
+	const music = new Song(title,artist,plays);
+		plays = 0;
+		songPlays.push(music);
+		console.log(music);
+		return songPlays;
+}
+
+function playSong(title, artist, plays){
+	for(var i=0; i<songPlays.length; i++){
+		if((songPlays[i].title === title) && (songPlays[i].artist === artist)){
+			console.log('title and artist already exist');
+			songPlays[i].plays = songPlays[i].plays + 1;
+			console.log('this song is played:',songPlays[i].plays, 'times');
+		}else{
+			console.log('please addSong');
+			
+		}
+	}
+	return songPlays;
+}
+
+/*
 \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 Play Song function 
