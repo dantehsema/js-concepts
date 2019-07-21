@@ -192,4 +192,23 @@ your app has playSong boolean that turns a song on or off
 
 Part II
 your app should display the most popular songs from an artist discography list 
+push all play numbers into an array.
+if the max of the numbers on that array evquals something
+in the someplay, then display its title
 */
+function popularSong(songPlays){
+	for(var i=0; i<songPlays.length; i++){
+		const tempArr = [];
+		tempArr.push(songPlays[i].plays);
+		console.log('Here are all plays in songPlays:',tempArr);
+		popular = Math.max(tempArr);
+		if(popular === songPlays[i].plays){
+			console.log('this is the tile of most playd song:', songPlays[i].title);
+		}
+
+		// 	popular = songPlays[i].plays;
+		// 	return popular;
+		// }
+	}
+	return popular;
+}
